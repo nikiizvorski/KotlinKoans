@@ -1,4 +1,4 @@
-import java.util.*
+package introduction
 
 data class Person(val name: String, val age: Int)
 
