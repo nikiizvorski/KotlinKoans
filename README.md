@@ -10,6 +10,10 @@ Introduction
 ---------------
 Here you can find all the challenges done and ready together with the explanation of each task and example.
 
+Tools used
+---------------
+Go ahead and use the latest IntelliJ it have the setup for the project to run single examples 
+
 Licenze - MIT
 ---------------
 
