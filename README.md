@@ -6,7 +6,7 @@ You can play with Koans online: https://play.kotlinlang.org/koans/overview.
 
 You can solve the tasks right inside IntelliJ IDEA or Android Studio by installing the EduTools plugin and choosing Kotlin Koans course.
 
-Project Structure
+Introduction
 ---------------
 Here you can find all the challenges done and ready together with the explanation of each task and example.
 
