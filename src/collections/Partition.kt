@@ -10,6 +10,12 @@ fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> = c
     undelivered.size > delivered.size
 }.toSet()
 
+// Return customers who have more than 1 item and delivered orders
+fun Shop.getCustomerWhoDeliveredMore(): Set<Customer> = customers.filter {
+    val (delivered, undelivered) = it.orders.partition { it.products.size > 1 && it.isDelivered }
+    delivered.size > undelivered.size
+}.toSet()
+
 /**
  *
  * https://kotlinlang.org/docs/reference/multi-declarations.html?_ga=2.7572466.1521765151.1567079927-1117251407.1567079927
@@ -21,4 +27,5 @@ fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> = c
 
 fun main(args: Array<String>) {
     println(shop.getCustomersWithMoreUndeliveredOrdersThanDelivered())
+    println(shop.getCustomerWhoDeliveredMore())
 }
