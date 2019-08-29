@@ -1,6 +1,7 @@
 package collections
 
 import misc.*
+import kotlin.math.roundToInt
 
 // Return true if all customers are from the given city
 fun Shop.checkAllCustomersAreFrom(city: City): Boolean = customers.all{
@@ -16,6 +17,11 @@ fun Shop.hasCustomerFrom(city: City): Boolean = customers.any{
 fun Shop.countCustomersFrom(city: City): Int = customers.count {
     it.city == city
 }
+
+// Return the highest priced item from specific customer orders
+fun Shop.countHighestValuedProductInCustomerOrders(customer: Customer): Int = customer.orders.flatMap {
+    it.products
+}.maxBy { it.price }?.price?.roundToInt()!!
 
 // Return a customer who lives in the given city, or null if there is none
 fun Shop.findAnyCustomerFrom(city: City): Customer? = customers.find {
@@ -45,4 +51,5 @@ fun main(args: Array<String>) {
     println(shop.hasCustomerFrom(Tokyo))
     println(shop.countCustomersFrom(Vancouver))
     println(shop.findAnyCustomerFrom(Canberra))
+    println(shop.countHighestValuedProductInCustomerOrders(customers.getValue("Reka")))
 }
