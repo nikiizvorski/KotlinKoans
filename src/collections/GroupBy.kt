@@ -7,10 +7,15 @@ fun Shop.groupCustomersByCity(): Map<City, List<Customer>> = customers.groupBy{
     it.city
 }
 
-// Return a map of the customers with highest orders number and sorted
+// Return a map of the customers with highest orders number and sorted ASC
 fun Shop.getCustomerByOrdersNumber(): Map<Int, List<Customer>> = customers.groupBy {
     it.orders.size
 }.toSortedMap()
+
+// Return a map of the customers with highest orders number and sorted DESC
+fun Shop.getCustomerByOrdersNumberDesc(): Map<Int, List<Customer>> = customers.groupBy {
+    it.orders.size
+}.toSortedMap(reverseOrder())
 
 /**
  *
@@ -21,5 +26,6 @@ fun Shop.getCustomerByOrdersNumber(): Map<Int, List<Customer>> = customers.group
 
 fun main(args: Array<String>) {
     println(shop.groupCustomersByCity())
-    print(shop.getCustomerByOrdersNumber())
+    println(shop.getCustomerByOrdersNumber())
+    println(shop.getCustomerByOrdersNumberDesc())
 }
