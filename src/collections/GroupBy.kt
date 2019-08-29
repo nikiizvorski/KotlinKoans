@@ -19,6 +19,8 @@ fun Shop.getCustomerByOrdersNumberDesc(): Map<Int, List<Customer>> = customers.g
 
 /**
  *
+ * https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.comparisons/index.html
+ *
  * https://play.kotlinlang.org/koans/Collections/GroupBy/Task.kt
  *
  * Implement Shop.groupCustomersByCity() using groupBy.
