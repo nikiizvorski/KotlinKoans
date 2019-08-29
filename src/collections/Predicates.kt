@@ -23,6 +23,9 @@ fun Shop.countHighestValuedProductInCustomerOrders(customer: Customer): Int = cu
     it.products
 }.maxBy { it.price }?.price?.roundToInt()!!
 
+// Return Orders count by specific customer
+fun Shop.countCustomerOrders(customer: Customer): Int = customer.orders.count()
+
 // Return a customer who lives in the given city, or null if there is none
 fun Shop.findAnyCustomerFrom(city: City): Customer? = customers.find {
     it.city == city
@@ -52,4 +55,5 @@ fun main(args: Array<String>) {
     println(shop.countCustomersFrom(Vancouver))
     println(shop.findAnyCustomerFrom(Canberra))
     println(shop.countHighestValuedProductInCustomerOrders(customers.getValue("Reka")))
+    println(shop.countCustomerOrders(customers.getValue("Reka")))
 }
