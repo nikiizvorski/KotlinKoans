@@ -23,6 +23,8 @@ fun Shop.getCustomerWhoDeliveredMore(): Set<Customer> = customers.filter {
  * https://play.kotlinlang.org/koans/Collections/Partition/Task.kt
  *
  * Implement Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered() using partition.
+ *
+ * Partition basically takes a predicate and uses that to split a collection in a pair of two lists depending on the condition added.
  */
 
 fun main(args: Array<String>) {
