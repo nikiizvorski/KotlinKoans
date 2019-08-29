@@ -70,6 +70,8 @@ val orderedProducts = setOf(idea, reSharper, dotTrace, dotMemory, rubyMine, webS
 
 val sortedCustomers = listOf(cooper, nathan, bajram, asuka, lucas, riku, reka).map { customers[it] }
 
+val simpleListCustomers = listOf(cooper, nathan, bajram, asuka, lucas, riku, reka)
+
 val groupedByCities = mapOf(
         Canberra to listOf(lucas, cooper),
         Vancouver to listOf(nathan),
