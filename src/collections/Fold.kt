@@ -1,8 +1,6 @@
 package collections
 
-import misc.Product
-import misc.Shop
-import misc.shop
+import misc.*
 
 // Return the set of products that were ordered by every customer
 fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product> {
